@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -40,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         fab_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, NotesTakerActivity.class);
+                startActivityForResult(intent, 101);
             }
         });
     }
